@@ -1,6 +1,13 @@
 const bar = document.getElementById("bar");
 const navbar = document.getElementById("navbar");
 const close = document.getElementById("close");
+const btnclick = document.getElementById("btnclick");
+const addcart = document.querySelector("#addding");
+if (btnclick) {
+  btnclick.addEventListener("click", () => {
+    window.location.href = "cart.html";
+  });
+}
 
 if (bar) {
   bar.addEventListener("click", () => {
@@ -25,16 +32,26 @@ products.forEach((item) => {
 
 let Singleproimgs = document.getElementsByClassName("small-imgs");
 
-Singleproimgs[0].onclick = () => {
-  mainimg.src = Singleproimgs[0].src;
-};
+if (Singleproimgs[0]) {
+  Singleproimgs[0].addEventListener("click", () => {
+    mainimg.src = Singleproimgs[0].src;
+  });
+}
 
-Singleproimgs[1].onclick = () => {
-  mainimg.src = Singleproimgs[1].src;
-};
-Singleproimgs[2].onclick = () => {
-  mainimg.src = Singleproimgs[2].src;
-};
-Singleproimgs[3].onclick = () => {
-  mainimg.src = Singleproimgs[3].src;
-};
+if (Singleproimgs[1]) {
+  Singleproimgs[1].addEventListener("click", () => {
+    mainimg.src = Singleproimgs[1].src;
+  });
+}
+
+if (Singleproimgs[2]) {
+  Singleproimgs[2].addEventListener("click", () => {
+    mainimg.src = Singleproimgs[2].src;
+  });
+}
+
+if (Singleproimgs[3]) {
+  Singleproimgs[3].addEventListener("click", () => {
+    mainimg.src = Singleproimgs[3].src;
+  });
+}
