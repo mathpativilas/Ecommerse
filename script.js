@@ -3,6 +3,30 @@ const navbar = document.getElementById("navbar");
 const close = document.getElementById("close");
 const btnclick = document.getElementById("btnclick");
 const addcart = document.querySelector("#addding");
+const firstcart = document.querySelectorAll("#firstcart");
+const removecart = document.querySelectorAll(".removecart");
+
+if (firstcart[0]) {
+  firstcart[0].addEventListener("click", () => {
+    removecart[0].classList.add("cartremove");
+  });
+}
+if (firstcart[1]) {
+  firstcart[1].addEventListener("click", () => {
+    removecart[1].classList.add("cartremove");
+  });
+}
+if (firstcart[2]) {
+  firstcart[2].addEventListener("click", () => {
+    removecart[2].classList.add("cartremove");
+  });
+}
+if (firstcart[3]) {
+  firstcart[3].addEventListener("click", () => {
+    removecart[3].classList.add("cartremove");
+  });
+}
+
 if (btnclick) {
   btnclick.addEventListener("click", () => {
     window.location.href = "cart.html";
